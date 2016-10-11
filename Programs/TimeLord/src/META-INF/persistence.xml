@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="TimeLordPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>timelord.entities.LUDayName</class>
+    <class>timelord.entities.LUDays</class>
+    <class>timelord.entities.LUMonthOfYear</class>
+    <class>timelord.entities.LUMonths</class>
+    <class>timelord.entities.LUQuarters</class>
+    <class>timelord.entities.LUWeeks</class>
+    <class>timelord.entities.LUYears</class>
+    <class>timelord.entities.LUYesNo</class>
+    <class>timelord.entities.TransFiscal</class>
+    <class>timelord.entities.TransMtd</class>
+    <class>timelord.entities.TransQtd</class>
+    <class>timelord.entities.TransYtd</class>
+    <class>timelord.entities.LUTime</class>
+    <class>timelord.entities.LUPeriods</class>
+    <class>timelord.entities.TransQtm</class>
+    <class>timelord.entities.LUPeriodWeeks</class>
+    <class>timelord.entities.LUPeriodQuarters</class>
+    <class>timelord.entities.LUHalfHours</class>
+    <class>timelord.entities.LUHours</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:jtds:sqlserver://localhost/ActivityMaster;instance=SQLEXPRESS"/>
+      <property name="javax.persistence.jdbc.password" value="menamoo0#"/>
+      <property name="javax.persistence.jdbc.driver" value="net.sourceforge.jtds.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="sa"/>
+      
+      <property name="hbm2ddl.auto" value="create"/>
+      <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+      <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+    </properties>
+    <!--<properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:jtds:sqlserver://10.0.0.50/TimeLord;;useNTLMv2=true;domain=AngelSoftware"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.jdbc.driver" value="net.sourceforge.jtds.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="mmagon"/>
+      
+    </properties>-->
+  </persistence-unit>
+</persistence>
